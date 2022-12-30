@@ -1,4 +1,4 @@
--- open source enjoy
+-- Open source, enjoyyy
 
 local PartnerUI = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -11,34 +11,40 @@ local UICorner_3 = Instance.new("UICorner")
 local off = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
 local extraoption = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local Frame_2 = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
 local TextButton_2 = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local on_2 = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
 local TextButton_3 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local TextButton_4 = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local TextButton_5 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local TextButton_6 = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local TextButton_7 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 local TextButton_8 = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local TextButton_9 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local TextButton_10 = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local closeextra = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local off_2 = Instance.new("TextButton")
 local UICorner_17 = Instance.new("UICorner")
+local off_3 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local off_4 = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local Ctag = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -49,7 +55,7 @@ PartnerUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Frame.Parent = PartnerUI
 Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 Frame.Position = UDim2.new(0.273684204, 0, 0.150617287, 0)
-Frame.Size = UDim2.new(0, 327, 0, 98)
+Frame.Size = UDim2.new(0, 327, 0, 165)
 Frame.Active = true
 Frame.Draggable = true
 
@@ -58,7 +64,7 @@ UICorner.Parent = Frame
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
-TextBox.Position = UDim2.new(0.0244648326, 0, 0.095864661, 0)
+TextBox.Position = UDim2.new(0.0244648326, 0, 0.0413192064, 0)
 TextBox.Size = UDim2.new(0, 238, 0, 24)
 TextBox.Font = Enum.Font.SourceSans
 TextBox.Text = ""
@@ -69,7 +75,7 @@ TextBox.TextWrapped = true
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TextButton.Position = UDim2.new(0.773700297, 0, 0.0827067643, 0)
+TextButton.Position = UDim2.new(0.773700297, 0, 0.0402825214, 0)
 TextButton.Size = UDim2.new(0, 69, 0, 24)
 TextButton.Font = Enum.Font.Gotham
 TextButton.Text = "Send"
@@ -78,7 +84,7 @@ TextButton.TextScaled = true
 TextButton.TextSize = 14.000
 TextButton.TextWrapped = true
 TextButton.MouseButton1Down:connect(function()
-	if on.Visible == true then
+	if Ctag.Text == "🔧Moderator" then
 		local chatmessage = game.CoreGui.PartnerUI.Frame.TextBox.Text
 
 		local args = {
@@ -88,12 +94,34 @@ TextButton.MouseButton1Down:connect(function()
 
 		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 
-	else
-
+	end
+	if Ctag.Text == "🔥Partner" then
 		local chatmessage = game.CoreGui.PartnerUI.Frame.TextBox.Text
 
 		local args = {
 			[1] = "[🔥Partner]: " .. chatmessage,
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+	end
+	if Ctag.Text == "💎NFT" then
+		local chatmessage = game.CoreGui.PartnerUI.Frame.TextBox.Text
+
+		local args = {
+			[1] = "[💎NFT]: " .. chatmessage,
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+	end
+	if Ctag.Text == "🛠Developer" then
+		local chatmessage = game.CoreGui.PartnerUI.Frame.TextBox.Text
+
+		local args = {
+			[1] = "[🛠Developer]: " .. chatmessage,
 			[2] = "All"
 		}
 
@@ -120,44 +148,34 @@ UICorner_3.Parent = on
 
 off.Name = "off"
 off.Parent = Frame
-off.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-off.Position = UDim2.new(0.0244648326, 0, 0.424274981, 0)
-off.Size = UDim2.new(0, 30, 0, 30)
-off.Font = Enum.Font.SourceSans
-off.Text = ""
+off.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+off.Position = UDim2.new(0.0244648326, 0, 0.224536195, 0)
+off.Size = UDim2.new(0, 113, 0, 23)
+off.Font = Enum.Font.Gotham
+off.Text = "🔥Partner"
 off.TextColor3 = Color3.fromRGB(0, 0, 0)
+off.TextScaled = true
 off.TextSize = 14.000
+off.TextWrapped = true
 
 UICorner_4.Parent = off
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.134556577, 0, 0.405209482, 0)
-TextLabel.Size = UDim2.new(0, 178, 0, 32)
+TextLabel.Position = UDim2.new(0, 0, 0.877812982, 0)
+TextLabel.Size = UDim2.new(0, 327, 0, 20)
 TextLabel.Font = Enum.Font.Gotham
-TextLabel.Text = "Moderator Chat Tag"
+TextLabel.Text = "Moon#7121                     discord.gg/petsimulatorx"
 TextLabel.TextColor3 = Color3.fromRGB(103, 103, 103)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0, 0, 0.792964518, 0)
-TextLabel_2.Size = UDim2.new(0, 327, 0, 20)
-TextLabel_2.Font = Enum.Font.Gotham
-TextLabel_2.Text = "Moon#7121                     discord.gg/petsimulatorx"
-TextLabel_2.TextColor3 = Color3.fromRGB(103, 103, 103)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
 extraoption.Name = "extraoption"
 extraoption.Parent = Frame
 extraoption.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-extraoption.Position = UDim2.new(0.883792043, 0, 0.439849555, 0)
+extraoption.Position = UDim2.new(0.883792043, 0, 0.221667737, 0)
 extraoption.Size = UDim2.new(0, 33, 0, 24)
 extraoption.Font = Enum.Font.Gotham
 extraoption.Text = ">"
@@ -170,7 +188,7 @@ UICorner_5.Parent = extraoption
 
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-Frame_2.Position = UDim2.new(0.999671102, 0, -0.747341871, 0)
+Frame_2.Position = UDim2.new(0.999671102, 0, -0.044311583, 0)
 Frame_2.Size = UDim2.new(0, 176, 0, 179)
 Frame_2.Visible = false
 
@@ -190,30 +208,17 @@ TextButton_2.TextWrapped = true
 
 UICorner_7.Parent = TextButton_2
 
-on_2.Name = "on"
-on_2.Parent = Frame_2
-on_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-on_2.Position = UDim2.new(0.0244648326, 0, 0.424274981, 0)
-on_2.Size = UDim2.new(0, 30, 0, 30)
-on_2.Visible = false
-on_2.Font = Enum.Font.SourceSans
-on_2.Text = ""
-on_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-on_2.TextSize = 14.000
-
-UICorner_8.Parent = on_2
-
-TextLabel_3.Parent = Frame_2
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.0209201463, 0, 0.241466761, 0)
-TextLabel_3.Size = UDim2.new(0, 160, 0, 20)
-TextLabel_3.Font = Enum.Font.Gotham
-TextLabel_3.Text = "Auto-Chat"
-TextLabel_3.TextColor3 = Color3.fromRGB(103, 103, 103)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0209201463, 0, 0.241466761, 0)
+TextLabel_2.Size = UDim2.new(0, 160, 0, 20)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "Auto-Chat"
+TextLabel_2.TextColor3 = Color3.fromRGB(103, 103, 103)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
 
 TextButton_3.Parent = Frame_2
 TextButton_3.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -226,20 +231,20 @@ TextButton_3.TextScaled = true
 TextButton_3.TextSize = 14.000
 TextButton_3.TextWrapped = true
 
-UICorner_9.Parent = TextButton_3
+UICorner_8.Parent = TextButton_3
 
 TextButton_4.Parent = Frame_2
 TextButton_4.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 TextButton_4.Position = UDim2.new(0.0349998474, 0, 0.550000072, 0)
 TextButton_4.Size = UDim2.new(0, 122, 0, 21)
 TextButton_4.Font = Enum.Font.Gotham
-TextButton_4.Text = "\"You need anything?\""
+TextButton_4.Text = "\"Signing pets!\""
 TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.TextScaled = true
 TextButton_4.TextSize = 14.000
 TextButton_4.TextWrapped = true
 
-UICorner_10.Parent = TextButton_4
+UICorner_9.Parent = TextButton_4
 
 TextButton_5.Parent = Frame_2
 TextButton_5.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -252,7 +257,7 @@ TextButton_5.TextScaled = true
 TextButton_5.TextSize = 14.000
 TextButton_5.TextWrapped = true
 
-UICorner_11.Parent = TextButton_5
+UICorner_10.Parent = TextButton_5
 
 TextButton_6.Parent = Frame_2
 TextButton_6.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -265,7 +270,7 @@ TextButton_6.TextScaled = true
 TextButton_6.TextSize = 14.000
 TextButton_6.TextWrapped = true
 
-UICorner_12.Parent = TextButton_6
+UICorner_11.Parent = TextButton_6
 
 TextButton_7.Parent = Frame_2
 TextButton_7.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -278,7 +283,7 @@ TextButton_7.TextScaled = true
 TextButton_7.TextSize = 14.000
 TextButton_7.TextWrapped = true
 
-UICorner_13.Parent = TextButton_7
+UICorner_12.Parent = TextButton_7
 
 TextButton_8.Parent = Frame_2
 TextButton_8.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -291,7 +296,7 @@ TextButton_8.TextScaled = true
 TextButton_8.TextSize = 14.000
 TextButton_8.TextWrapped = true
 
-UICorner_14.Parent = TextButton_8
+UICorner_13.Parent = TextButton_8
 
 TextButton_9.Parent = Frame_2
 TextButton_9.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -304,7 +309,7 @@ TextButton_9.TextScaled = true
 TextButton_9.TextSize = 14.000
 TextButton_9.TextWrapped = true
 
-UICorner_15.Parent = TextButton_9
+UICorner_14.Parent = TextButton_9
 
 TextButton_10.Parent = Frame_2
 TextButton_10.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -317,7 +322,7 @@ TextButton_10.TextScaled = true
 TextButton_10.TextSize = 14.000
 TextButton_10.TextWrapped = true
 
-UICorner_16.Parent = TextButton_10
+UICorner_15.Parent = TextButton_10
 
 closeextra.Name = "closeextra"
 closeextra.Parent = Frame
@@ -332,11 +337,90 @@ closeextra.TextScaled = true
 closeextra.TextSize = 14.000
 closeextra.TextWrapped = true
 
-UICorner_17.Parent = closeextra
+UICorner_16.Parent = closeextra
+
+off_2.Name = "off"
+off_2.Parent = Frame
+off_2.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+off_2.Position = UDim2.new(0.40672785, 0, 0.224536195, 0)
+off_2.Size = UDim2.new(0, 113, 0, 23)
+off_2.Font = Enum.Font.Gotham
+off_2.Text = "🔧Moderator"
+off_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_2.TextScaled = true
+off_2.TextSize = 14.000
+off_2.TextWrapped = true
+
+UICorner_17.Parent = off_2
+
+off_3.Name = "off"
+off_3.Parent = Frame
+off_3.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+off_3.Position = UDim2.new(0.0244648326, 0, 0.424536198, 0)
+off_3.Size = UDim2.new(0, 113, 0, 23)
+off_3.Font = Enum.Font.Gotham
+off_3.Text = "💎NFT"
+off_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_3.TextScaled = true
+off_3.TextSize = 14.000
+off_3.TextWrapped = true
+
+UICorner_18.Parent = off_3
+
+off_4.Name = "off"
+off_4.Parent = Frame
+off_4.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+off_4.Position = UDim2.new(0.40672785, 0, 0.424536198, 0)
+off_4.Size = UDim2.new(0, 113, 0, 23)
+off_4.Font = Enum.Font.Gotham
+off_4.Text = "🛠Developer"
+off_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_4.TextScaled = true
+off_4.TextSize = 14.000
+off_4.TextWrapped = true
+
+UICorner_19.Parent = off_4
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, 0.605085731, 0)
+TextLabel_3.Size = UDim2.new(0, 113, 0, 20)
+TextLabel_3.Font = Enum.Font.Gotham
+TextLabel_3.Text = "Current Tag:"
+TextLabel_3.TextColor3 = Color3.fromRGB(103, 103, 103)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+Ctag.Name = "Ctag"
+Ctag.Parent = Frame
+Ctag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ctag.BackgroundTransparency = 1.000
+Ctag.Position = UDim2.new(0.345565736, 0, 0.605085731, 0)
+Ctag.Size = UDim2.new(0, 133, 0, 20)
+Ctag.Font = Enum.Font.Gotham
+Ctag.Text = "🔥Partner"
+Ctag.TextColor3 = Color3.fromRGB(103, 103, 103)
+Ctag.TextScaled = true
+Ctag.TextSize = 14.000
+Ctag.TextWrapped = true
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0, 0, 0.756600857, 0)
+TextLabel_4.Size = UDim2.new(0, 327, 0, 20)
+TextLabel_4.Font = Enum.Font.Gotham
+TextLabel_4.Text = "Use this script on an alt! You may get banned."
+TextLabel_4.TextColor3 = Color3.fromRGB(103, 103, 103)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
 
 -- Scripts:
 
-local function LEPRX_fake_script() -- on.LocalScript 
+local function GYMHAN_fake_script() -- on.LocalScript 
 	local script = Instance.new('LocalScript', on)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -344,17 +428,16 @@ local function LEPRX_fake_script() -- on.LocalScript
 		script.Parent.Parent.off.Visible = true
 	end)
 end
-coroutine.wrap(LEPRX_fake_script)()
-local function IUBMN_fake_script() -- off.LocalScript 
+coroutine.wrap(GYMHAN_fake_script)()
+local function NHFAM_fake_script() -- off.LocalScript 
 	local script = Instance.new('LocalScript', off)
 
 	script.Parent.MouseButton1Down:connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.on.Visible = true
+		Ctag.Text = "🔥Partner"
 	end)
 end
-coroutine.wrap(IUBMN_fake_script)()
-local function OAKP_fake_script() -- extraoption.LocalScript 
+coroutine.wrap(NHFAM_fake_script)()
+local function QNEBF_fake_script() -- extraoption.LocalScript 
 	local script = Instance.new('LocalScript', extraoption)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -363,8 +446,8 @@ local function OAKP_fake_script() -- extraoption.LocalScript
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OAKP_fake_script)()
-local function ATVLTS_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(QNEBF_fake_script)()
+local function FWVGEP_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -372,81 +455,72 @@ local function ATVLTS_fake_script() -- TextButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(ATVLTS_fake_script)()
-local function OCTA_fake_script() -- on_2.LocalScript 
-	local script = Instance.new('LocalScript', on_2)
-
-	script.Parent.MouseButton1Down:connect(function()
-		script.Parent.Visible = false
-		script.Parent.Parent.off.Visible = true
-	end)
-end
-coroutine.wrap(OCTA_fake_script)()
-local function TENLB_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(FWVGEP_fake_script)()
+local function DRRHNF_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "Hello!"
 	end)
 end
-coroutine.wrap(TENLB_fake_script)()
-local function EOOXUAX_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(DRRHNF_fake_script)()
+local function FCIC_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Down:connect(function()
-		game.CoreGui.PartnerUI.Frame.TextBox.Text = "You need anything?"
+		game.CoreGui.PartnerUI.Frame.TextBox.Text = "Signing pets!"
 	end)
 end
-coroutine.wrap(EOOXUAX_fake_script)()
-local function YPJDE_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(FCIC_fake_script)()
+local function YSBJYS_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "You need me to sign anything?"
 	end)
 end
-coroutine.wrap(YPJDE_fake_script)()
-local function WVLHCRN_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(YSBJYS_fake_script)()
+local function NFQK_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "Partners can only sign exclusives, sorry"
 	end)
 end
-coroutine.wrap(WVLHCRN_fake_script)()
-local function ADGIQG_fake_script() -- TextButton_7.LocalScript 
+coroutine.wrap(NFQK_fake_script)()
+local function CWBIQZ_fake_script() -- TextButton_7.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_7)
 
 	script.Parent.MouseButton1Down:connect(function()
 		setclipboard('Hello!')
 	end)
 end
-coroutine.wrap(ADGIQG_fake_script)()
-local function RHNSBX_fake_script() -- TextButton_8.LocalScript 
+coroutine.wrap(CWBIQZ_fake_script)()
+local function TULX_fake_script() -- TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_8)
 
 	script.Parent.MouseButton1Down:connect(function()
-		setclipboard('You need anything?')
+		setclipboard('Signing pets!')
 	end)
 end
-coroutine.wrap(RHNSBX_fake_script)()
-local function NUOZY_fake_script() -- TextButton_9.LocalScript 
+coroutine.wrap(TULX_fake_script)()
+local function VENNTQ_fake_script() -- TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_9)
 
 	script.Parent.MouseButton1Down:connect(function()
 		setclipboard('You need me to sign anything?')
 	end)
 end
-coroutine.wrap(NUOZY_fake_script)()
-local function VEGQAA_fake_script() -- TextButton_10.LocalScript 
+coroutine.wrap(VENNTQ_fake_script)()
+local function EKPBIKM_fake_script() -- TextButton_10.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_10)
 
 	script.Parent.MouseButton1Down:connect(function()
 		setclipboard('Partners can only sign exclusives, sorry')
 	end)
 end
-coroutine.wrap(VEGQAA_fake_script)()
-local function GAAFCS_fake_script() -- closeextra.LocalScript 
+coroutine.wrap(EKPBIKM_fake_script)()
+local function UQZBUHA_fake_script() -- closeextra.LocalScript 
 	local script = Instance.new('LocalScript', closeextra)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -455,4 +529,28 @@ local function GAAFCS_fake_script() -- closeextra.LocalScript
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(GAAFCS_fake_script)()
+coroutine.wrap(UQZBUHA_fake_script)()
+local function LZPAMOK_fake_script() -- off_2.LocalScript 
+	local script = Instance.new('LocalScript', off_2)
+
+	script.Parent.MouseButton1Down:connect(function()
+		Ctag.Text = "🔧Moderator"
+	end)
+end
+coroutine.wrap(LZPAMOK_fake_script)()
+local function BWWKHCS_fake_script() -- off_3.LocalScript 
+	local script = Instance.new('LocalScript', off_3)
+
+	script.Parent.MouseButton1Down:connect(function()
+		Ctag.Text = "💎NFT"
+	end)
+end
+coroutine.wrap(BWWKHCS_fake_script)()
+local function DNBCNJ_fake_script() -- off_4.LocalScript 
+	local script = Instance.new('LocalScript', off_4)
+
+	script.Parent.MouseButton1Down:connect(function()
+		Ctag.Text = "🛠Developer"
+	end)
+end
+coroutine.wrap(DNBCNJ_fake_script)()
