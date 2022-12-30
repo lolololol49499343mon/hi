@@ -1,4 +1,4 @@
--- open source have fun
+-- open source enjoy
 
 local PartnerUI = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -29,8 +29,18 @@ local TextButton_5 = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local TextButton_6 = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local closeextra = Instance.new("TextButton")
+local TextButton_7 = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local TextButton_9 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local TextButton_10 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local closeextra = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+
+--Properties:
 
 PartnerUI.Name = "PartnerUI"
 PartnerUI.Parent = game.CoreGui
@@ -51,7 +61,7 @@ TextBox.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
 TextBox.Position = UDim2.new(0.0244648326, 0, 0.095864661, 0)
 TextBox.Size = UDim2.new(0, 238, 0, 24)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = "hi"
+TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(165, 165, 165)
 TextBox.TextScaled = true
 TextBox.TextSize = 14.000
@@ -207,8 +217,8 @@ TextLabel_3.TextWrapped = true
 
 TextButton_3.Parent = Frame_2
 TextButton_3.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TextButton_3.Position = UDim2.new(0.0347019546, 0, 0.405389607, 0)
-TextButton_3.Size = UDim2.new(0, 160, 0, 21)
+TextButton_3.Position = UDim2.new(0.0347019546, 0, 0.405389637, 0)
+TextButton_3.Size = UDim2.new(0, 123, 0, 21)
 TextButton_3.Font = Enum.Font.Gotham
 TextButton_3.Text = "\"Hello!\""
 TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -220,8 +230,8 @@ UICorner_9.Parent = TextButton_3
 
 TextButton_4.Parent = Frame_2
 TextButton_4.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TextButton_4.Position = UDim2.new(0.0350000001, 0, 0.550000012, 0)
-TextButton_4.Size = UDim2.new(0, 160, 0, 21)
+TextButton_4.Position = UDim2.new(0.0349998474, 0, 0.550000072, 0)
+TextButton_4.Size = UDim2.new(0, 122, 0, 21)
 TextButton_4.Font = Enum.Font.Gotham
 TextButton_4.Text = "\"You need anything?\""
 TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -233,8 +243,8 @@ UICorner_10.Parent = TextButton_4
 
 TextButton_5.Parent = Frame_2
 TextButton_5.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TextButton_5.Position = UDim2.new(0.0350000001, 0, 0.690893888, 0)
-TextButton_5.Size = UDim2.new(0, 160, 0, 21)
+TextButton_5.Position = UDim2.new(0.0349998474, 0, 0.690893948, 0)
+TextButton_5.Size = UDim2.new(0, 122, 0, 21)
 TextButton_5.Font = Enum.Font.Gotham
 TextButton_5.Text = "\"You need me to sign anything?\""
 TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -246,8 +256,8 @@ UICorner_11.Parent = TextButton_5
 
 TextButton_6.Parent = Frame_2
 TextButton_6.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-TextButton_6.Position = UDim2.new(0.0350000001, 0, 0.836145282, 0)
-TextButton_6.Size = UDim2.new(0, 160, 0, 21)
+TextButton_6.Position = UDim2.new(0.0349998474, 0, 0.836145222, 0)
+TextButton_6.Size = UDim2.new(0, 122, 0, 21)
 TextButton_6.Font = Enum.Font.Gotham
 TextButton_6.Text = "\"Partners can only sign exclusives, sorry\""
 TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -256,6 +266,58 @@ TextButton_6.TextSize = 14.000
 TextButton_6.TextWrapped = true
 
 UICorner_12.Parent = TextButton_6
+
+TextButton_7.Parent = Frame_2
+TextButton_7.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextButton_7.Position = UDim2.new(0.75629282, 0, 0.405389637, 0)
+TextButton_7.Size = UDim2.new(0, 34, 0, 21)
+TextButton_7.Font = Enum.Font.Gotham
+TextButton_7.Text = "C"
+TextButton_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14.000
+TextButton_7.TextWrapped = true
+
+UICorner_13.Parent = TextButton_7
+
+TextButton_8.Parent = Frame_2
+TextButton_8.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextButton_8.Position = UDim2.new(0.75629282, 0, 0.545054436, 0)
+TextButton_8.Size = UDim2.new(0, 34, 0, 21)
+TextButton_8.Font = Enum.Font.Gotham
+TextButton_8.Text = "C"
+TextButton_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+
+UICorner_14.Parent = TextButton_8
+
+TextButton_9.Parent = Frame_2
+TextButton_9.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextButton_9.Position = UDim2.new(0.75629282, 0, 0.690305829, 0)
+TextButton_9.Size = UDim2.new(0, 34, 0, 21)
+TextButton_9.Font = Enum.Font.Gotham
+TextButton_9.Text = "C"
+TextButton_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 14.000
+TextButton_9.TextWrapped = true
+
+UICorner_15.Parent = TextButton_9
+
+TextButton_10.Parent = Frame_2
+TextButton_10.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextButton_10.Position = UDim2.new(0.75629282, 0, 0.835557222, 0)
+TextButton_10.Size = UDim2.new(0, 34, 0, 21)
+TextButton_10.Font = Enum.Font.Gotham
+TextButton_10.Text = "C"
+TextButton_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 14.000
+TextButton_10.TextWrapped = true
+
+UICorner_16.Parent = TextButton_10
 
 closeextra.Name = "closeextra"
 closeextra.Parent = Frame
@@ -270,11 +332,11 @@ closeextra.TextScaled = true
 closeextra.TextSize = 14.000
 closeextra.TextWrapped = true
 
-UICorner_13.Parent = closeextra
+UICorner_17.Parent = closeextra
 
 -- Scripts:
 
-local function TQQQ_fake_script() -- on.LocalScript 
+local function LEPRX_fake_script() -- on.LocalScript 
 	local script = Instance.new('LocalScript', on)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -282,8 +344,8 @@ local function TQQQ_fake_script() -- on.LocalScript
 		script.Parent.Parent.off.Visible = true
 	end)
 end
-coroutine.wrap(TQQQ_fake_script)()
-local function EOBSNB_fake_script() -- off.LocalScript 
+coroutine.wrap(LEPRX_fake_script)()
+local function IUBMN_fake_script() -- off.LocalScript 
 	local script = Instance.new('LocalScript', off)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -291,8 +353,8 @@ local function EOBSNB_fake_script() -- off.LocalScript
 		script.Parent.Parent.on.Visible = true
 	end)
 end
-coroutine.wrap(EOBSNB_fake_script)()
-local function UZZKBK_fake_script() -- extraoption.LocalScript 
+coroutine.wrap(IUBMN_fake_script)()
+local function OAKP_fake_script() -- extraoption.LocalScript 
 	local script = Instance.new('LocalScript', extraoption)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -301,8 +363,8 @@ local function UZZKBK_fake_script() -- extraoption.LocalScript
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(UZZKBK_fake_script)()
-local function EHNZTX_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(OAKP_fake_script)()
+local function ATVLTS_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -310,8 +372,8 @@ local function EHNZTX_fake_script() -- TextButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(EHNZTX_fake_script)()
-local function SZVGHKE_fake_script() -- on_2.LocalScript 
+coroutine.wrap(ATVLTS_fake_script)()
+local function OCTA_fake_script() -- on_2.LocalScript 
 	local script = Instance.new('LocalScript', on_2)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -319,40 +381,72 @@ local function SZVGHKE_fake_script() -- on_2.LocalScript
 		script.Parent.Parent.off.Visible = true
 	end)
 end
-coroutine.wrap(SZVGHKE_fake_script)()
-local function YWTD_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(OCTA_fake_script)()
+local function TENLB_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "Hello!"
 	end)
 end
-coroutine.wrap(YWTD_fake_script)()
-local function FPZN_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(TENLB_fake_script)()
+local function EOOXUAX_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "You need anything?"
 	end)
 end
-coroutine.wrap(FPZN_fake_script)()
-local function ZBYSMF_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(EOOXUAX_fake_script)()
+local function YPJDE_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "You need me to sign anything?"
 	end)
 end
-coroutine.wrap(ZBYSMF_fake_script)()
-local function ZLPNZJ_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(YPJDE_fake_script)()
+local function WVLHCRN_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	script.Parent.MouseButton1Down:connect(function()
 		game.CoreGui.PartnerUI.Frame.TextBox.Text = "Partners can only sign exclusives, sorry"
 	end)
 end
-coroutine.wrap(ZLPNZJ_fake_script)()
-local function XKYZEC_fake_script() -- closeextra.LocalScript 
+coroutine.wrap(WVLHCRN_fake_script)()
+local function ADGIQG_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	script.Parent.MouseButton1Down:connect(function()
+		setclipboard('Hello!')
+	end)
+end
+coroutine.wrap(ADGIQG_fake_script)()
+local function RHNSBX_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	script.Parent.MouseButton1Down:connect(function()
+		setclipboard('You need anything?')
+	end)
+end
+coroutine.wrap(RHNSBX_fake_script)()
+local function NUOZY_fake_script() -- TextButton_9.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_9)
+
+	script.Parent.MouseButton1Down:connect(function()
+		setclipboard('You need me to sign anything?')
+	end)
+end
+coroutine.wrap(NUOZY_fake_script)()
+local function VEGQAA_fake_script() -- TextButton_10.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_10)
+
+	script.Parent.MouseButton1Down:connect(function()
+		setclipboard('Partners can only sign exclusives, sorry')
+	end)
+end
+coroutine.wrap(VEGQAA_fake_script)()
+local function GAAFCS_fake_script() -- closeextra.LocalScript 
 	local script = Instance.new('LocalScript', closeextra)
 
 	script.Parent.MouseButton1Down:connect(function()
@@ -361,4 +455,4 @@ local function XKYZEC_fake_script() -- closeextra.LocalScript
 		script.Parent.Visible = false
 	end)
 end
-coroutine.wrap(XKYZEC_fake_script)()
+coroutine.wrap(GAAFCS_fake_script)()
