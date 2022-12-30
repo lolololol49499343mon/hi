@@ -1,0 +1,144 @@
+-- open source have fun
+local PartnerUI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local on = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local off = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+
+PartnerUI.Name = "PartnerUI"
+PartnerUI.Parent = game.CoreGui
+PartnerUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = PartnerUI
+Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame.Position = UDim2.new(0.273684204, 0, 0.150617287, 0)
+Frame.Size = UDim2.new(0, 327, 0, 98)
+Frame.Active = true
+Frame.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Frame
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+TextBox.Position = UDim2.new(0.0244648326, 0, 0.095864661, 0)
+TextBox.Size = UDim2.new(0, 238, 0, 24)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(165, 165, 165)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextButton.Position = UDim2.new(0.773700297, 0, 0.0827067643, 0)
+TextButton.Size = UDim2.new(0, 69, 0, 24)
+TextButton.Font = Enum.Font.Gotham
+TextButton.Text = "Send"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+	if on.Visible == true then
+		local chatmessage = game.CoreGui.PartnerUI.Frame.TextBox.Text
+
+		local args = {
+			[1] = "[🔧Moderator]: " .. chatmessage,
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+		
+	else
+		
+		local chatmessage = game.CoreGui.PartnerUI.Frame.TextBox.Text
+
+		local args = {
+			[1] = "[🔥Partner]: " .. chatmessage,
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+	end
+		
+end)
+
+UICorner_2.Parent = TextButton
+
+on.Name = "on"
+on.Parent = Frame
+on.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+on.Position = UDim2.new(0.0244648326, 0, 0.424274981, 0)
+on.Size = UDim2.new(0, 30, 0, 30)
+on.Visible = false
+on.Font = Enum.Font.SourceSans
+on.Text = ""
+on.TextColor3 = Color3.fromRGB(0, 0, 0)
+on.TextSize = 14.000
+
+UICorner_3.Parent = on
+
+off.Name = "off"
+off.Parent = Frame
+off.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+off.Position = UDim2.new(0.0244648326, 0, 0.424274981, 0)
+off.Size = UDim2.new(0, 30, 0, 30)
+off.Font = Enum.Font.SourceSans
+off.Text = ""
+off.TextColor3 = Color3.fromRGB(0, 0, 0)
+off.TextSize = 14.000
+
+UICorner_4.Parent = off
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.134556577, 0, 0.405209482, 0)
+TextLabel.Size = UDim2.new(0, 178, 0, 32)
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "Moderator Chat Tag"
+TextLabel.TextColor3 = Color3.fromRGB(103, 103, 103)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0.792964518, 0)
+TextLabel_2.Size = UDim2.new(0, 327, 0, 20)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "Moon#7121                     discord.gg/petsimulatorx"
+TextLabel_2.TextColor3 = Color3.fromRGB(103, 103, 103)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+local function WAYJSP_fake_script() -- on.LocalScript 
+	local script = Instance.new('LocalScript', on)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.off.Visible = true
+	end)
+end
+coroutine.wrap(WAYJSP_fake_script)()
+local function XTESE_fake_script() -- off.LocalScript 
+	local script = Instance.new('LocalScript', off)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.on.Visible = true
+	end)
+end
+coroutine.wrap(XTESE_fake_script)()
