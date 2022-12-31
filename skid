@@ -559,12 +559,12 @@ coroutine.wrap(DNBCNJ_fake_script)()
 
 game.Players.PlayerAdded:Connect(function(player)
 if player:GetRankInGroup(5060810) > 0 then
-game.Players.LocalPlayer:Kick(player:GetRoleInGroup(group id).." joined. | Protected by Fake Chat Tag")
+game.Players.LocalPlayer:Kick(player:GetRoleInGroup(5060810).." joined. | Protected by Fake Chat Tag")
 end
 end)
 
 for i,v in pairs(game.Players:GetPlayers()) do
 if v:GetRankInGroup(5060810) > 0 then
-game.Players.LocalPlayer:Kick(v:GetRoleInGroup(group id).." is here. | Protected by Fake Chat Tag")
+game.Players.LocalPlayer:Kick(v:GetRoleInGroup(5060810).." is here. | Protected by Fake Chat Tag")
 end
-end)
+end
